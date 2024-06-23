@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/img/Favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="carol's bakery portfolio website" />
+    <script src="https://kit.fontawesome.com/5727d82724.js" crossorigin="anonymous"></script>
+    <title>Carol's Cakery</title>
+    <link rel="stylesheet" href="./stylesheets/style.css">
+</head>
+<body class="flex flex-col min-h-screen">
+  <header>
+    <nav class="navbar flex justify-between items-center fixed w-screen px-3 transition ease-in-out delay-150">
+      <img src="" alt="carol's cakery logo" />
+      <ul class="flex mx-8">
+        <li class="px-4 py-2 m-3 transition ease-in delay-300 hover:bg-amber-900 rounded-xl hover:text-slate-100"><a href="./index.html">Home</a></li>
+        <li class="px-4 py-2 m-3 transition ease-in delay-300 hover:bg-amber-900 rounded-xl hover:text-slate-100"><a href="./about.html">About</a></li>
+        <li class="px-4 py-2 m-3 transition ease-in delay-300 hover:bg-amber-900 rounded-xl hover:text-slate-100"><a href="./gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <article class="banner p-36 text-center bg-amber-300">
+      <h1 class="font-bold text-amber-900">Carol&#39;s Cakery</h1>
+    </article>
+    <article class="my-20 mx-60 text-center">
+      <h2 class="text-amber-900 my-5">The Cakery Story</h2>
+      <p class="max-w-5xl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit ea dolore laboriosam, nihil qui exercitationem odit quod consequuntur non asperiores quasi nam officiis ipsa architecto hic ex veritatis, reiciendis necessitatibus! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam porro debitis beatae temporibus corporis deleniti saepe ipsam quaerat magnam aspernatur numquam ipsa consequuntur ea maiores omnis quibusdam eaque, facere quo. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis optio maxime excepturi illo non odio minima nihil! Amet at vero, dolorem autem accusamus velit id et dolore nesciunt sapiente rerum.</p>
+    </article>
+    <article class="categories flex flex-col items-center justify-center p-20 bg-amber-300">
+      <div class="flex">
+        <h2 class="px-4 py-2 m-2 rounded-lg border-4 border-amber-900 text-amber-900 bg-slate-100">Cheesecakes</h2>
+        <h2 class="px-4 py-2 m-2 rounded-lg border-4 border-amber-900 text-amber-900 bg-slate-100">Birthday Cakes</h2>
+      </div>
+      <div class="flex">
+        <h2 class="px-4 py-2 m-2 rounded-lg border-4 border-amber-900 text-amber-900 bg-slate-100">Roll Cakes</h2>
+        <h2 class="px-4 py-2 m-2 rounded-lg border-4 border-amber-900 text-amber-900 bg-slate-100">Puddings</h2>
+      </div>
+      <div class="flex">
+        <h2 class="px-4 py-2 m-2 rounded-lg border-4 border-amber-900 text-amber-900 bg-slate-100">Cookies</h2>
+        <h2 class="px-4 py-2 m-2 rounded-lg border-4 border-amber-900 text-amber-900 bg-slate-100">and other desserts</h2>
+      </div>
+    </article>
+    <article class="gallery p-10">
+      <div class="row flex flex-wrap py-0 px-1">
+        <div class="column basis-3/6">
+          <img src="wedding.jpg">
+          <img src="rocks.jpg">
+        </div>
+        <div class="column">
+          <img src="underwater.jpg">
+          <img src="ocean.jpg">
+        </div>
+        <div class="column">
+          <img src="wedding.jpg">
+          <img src="rocks.jpg">
+        </div>
+      </div>
+    </article>
+  </main>
+  <footer class="mt-auto text-center">
+    <div class="socials flex justify-center items-center mt-4 text">
+      <p>Reach out and follow me <a href="https://instagram.com/carols_cakeryy?igsh=NTc4MTIwNjQ2YQ==">@carols_cakeryy</a></p>
+      <a href="https://instagram.com/carols_cakeryy?igsh=NTc4MTIwNjQ2YQ=="><i class="fa-brands fa-instagram text-amber-900 w-6 h-6 px-5"></i></a>
+      <a href="mailto:carolscakery@gamil.com"><i class="fa-regular fa-envelope text-amber-900 w-6 h-6 px-5"></i></a>
+    </div>
+    <p class="py-3">&copy; Carol's Cakery 2024</p>
+  </footer>
+</body>
+<script>
+  const navbar = document.querySelector('.navbar');
+  const navLinks = document.querySelectorAll('.navbar li');
+
+  function navbarColorChangeOnScroll() {
+    if (window.scrollY > 0) {
+      navbar.style.backgroundColor = 'rgb(120 53 15)';
+      navLinks.forEach(link => {
+        link.classList.add('hover:bg-amber-300', 'text-slate-100', 'hover:text-slate-900');
+        link.classList.remove('hover:bg-amber-900', 'text-slate-900', 'hover:text-slate-100');
+      });
+    } else {
+      navbar.style.backgroundColor = 'rgb(252 211 77)';
+      navLinks.forEach(link => {
+        link.classList.add('hover:bg-amber-900', 'text-slate-900', 'hover:text-slate-100');
+        link.classList.remove('hover:bg-amber-300', 'text-slate-100', 'hover:text-slate-900');
+      });
+    }
+  }
+
+  window.addEventListener('scroll', navbarColorChangeOnScroll);
+</script>
+</html>

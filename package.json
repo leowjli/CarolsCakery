@@ -1,0 +1,15 @@
+{
+  "name": "carolscakery",
+  "version": "1.0.0",
+  "description": "carols cakery portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tailwindcss -i ./src/stylesheets/input.css -o ./src/stylesheets/style.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.4"
+  }
+}
