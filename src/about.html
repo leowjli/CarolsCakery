@@ -6,16 +6,19 @@
     <meta name="description" content="carol's bakery portfolio website" />
     <script src="https://kit.fontawesome.com/5727d82724.js" crossorigin="anonymous"></script>
     <title>Carol's Cakery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./stylesheets/style.css">
 </head>
 <body class="flex flex-col min-h-screen">
   <header>
-    <nav class="navbar flex justify-between items-center fixed w-screen px-3 transition ease-in-out delay-150">
+    <nav class="navbar flex justify-between items-center fixed w-screen px-4 transition ease-in-out delay-150">
       <img src="" alt="carol's cakery logo" />
       <ul class="flex mx-8">
-        <li class="px-4 py-2 m-3 transition ease-in delay-300 hover:bg-amber-900 rounded-xl hover:text-slate-100"><a href="./index.html">Home</a></li>
-        <li class="px-4 py-2 m-3 transition ease-in delay-300 hover:bg-amber-900 rounded-xl hover:text-slate-100"><a href="./about.html">About</a></li>
-        <li class="px-4 py-2 m-3 transition ease-in delay-300 hover:bg-amber-900 rounded-xl hover:text-slate-100"><a href="./gallery.html">Gallery</a></li>
+        <li class="py-2 my-3"><a class="px-4 py-2 m-3 transition ease-in delay-300 hover:bg-amber-900 rounded-xl hover:text-slate-100" href="./index.html">Home</a></li>
+        <li class="py-2 my-3"><a class="px-4 py-2 m-3 transition ease-in delay-300 hover:bg-amber-900 rounded-xl hover:text-slate-100" href="./about.html">About</a></li>
+        <li class="py-2 my-3"><a class="px-4 py-2 m-3 transition ease-in delay-300 hover:bg-amber-900 rounded-xl hover:text-slate-100" href="./gallery.html">Gallery</a></li>
       </ul>
     </nav>
   </header>
@@ -49,7 +52,7 @@
 </body>
 <script>
   const navbar = document.querySelector('.navbar');
-  const navLinks = document.querySelectorAll('.navbar li');
+  const navLinks = document.querySelectorAll('.navbar li a');
 
   function navbarColorChangeOnScroll() {
     if (window.scrollY > 0) {

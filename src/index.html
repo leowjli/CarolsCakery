@@ -6,22 +6,25 @@
     <meta name="description" content="carol's bakery portfolio website" />
     <script src="https://kit.fontawesome.com/5727d82724.js" crossorigin="anonymous"></script>
     <title>Carol's Cakery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./stylesheets/style.css">
 </head>
 <body class="flex flex-col min-h-screen">
   <header>
-    <nav class="navbar flex justify-between items-center fixed w-screen px-3 transition ease-in-out delay-150">
-      <img src="" alt="carol's cakery logo" />
+    <nav class="navbar flex justify-between items-center fixed w-screen px-4 transition ease-in-out delay-150">
+      <img class="pl-5" alt="carol's cakery logo" />
       <ul class="flex mx-8">
-        <li class="px-4 py-2 m-3 transition ease-in delay-300 hover:bg-amber-900 rounded-xl hover:text-slate-100"><a href="./index.html">Home</a></li>
-        <li class="px-4 py-2 m-3 transition ease-in delay-300 hover:bg-amber-900 rounded-xl hover:text-slate-100"><a href="./about.html">About</a></li>
-        <li class="px-4 py-2 m-3 transition ease-in delay-300 hover:bg-amber-900 rounded-xl hover:text-slate-100"><a href="./gallery.html">Gallery</a></li>
+        <li class="py-2 my-3"><a class="px-4 py-2 m-3 transition ease-in delay-300 hover:bg-amber-900 rounded-xl hover:text-slate-100" href="./index.html">Home</a></li>
+        <li class="py-2 my-3"><a class="px-4 py-2 m-3 transition ease-in delay-300 hover:bg-amber-900 rounded-xl hover:text-slate-100" href="./about.html">About</a></li>
+        <li class="py-2 my-3"><a class="px-4 py-2 m-3 transition ease-in delay-300 hover:bg-amber-900 rounded-xl hover:text-slate-100" href="./gallery.html">Gallery</a></li>
       </ul>
     </nav>
   </header>
   <main>
-    <article class="banner p-36 text-center bg-amber-300">
-      <h1 class="font-bold text-amber-900">Carol&#39;s Cakery</h1>
+    <article class="banner py-36 px-60 text-center bg-amber-300">
+      <h1 class="font-semibold text-amber-900 px-4 py-2 m-2 rounded-lg border-4 border-amber-900 bg-slate-100">Carol&#39;s Cakery</h1>
     </article>
     <article class="my-20 mx-60 text-center">
       <h2 class="text-amber-900 my-5">The Cakery Story</h2>
@@ -44,7 +47,7 @@
     <article class="gallery p-10">
       <div class="row flex flex-wrap py-0 px-1">
         <div class="column basis-3/6">
-          <img src="wedding.jpg">
+          <img class="col-span-1" src="../public/imgs/IMG_6408.JPG" alt="number 14 made of cake with fairy on top">
           <img src="rocks.jpg">
         </div>
         <div class="column">
@@ -69,7 +72,7 @@
 </body>
 <script>
   const navbar = document.querySelector('.navbar');
-  const navLinks = document.querySelectorAll('.navbar li');
+  const navLinks = document.querySelectorAll('.navbar li a');
 
   function navbarColorChangeOnScroll() {
     if (window.scrollY > 0) {

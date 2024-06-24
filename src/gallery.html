@@ -6,26 +6,41 @@
     <meta name="description" content="carol's bakery portfolio website" />
     <script src="https://kit.fontawesome.com/5727d82724.js" crossorigin="anonymous"></script>
     <title>Carol's Cakery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./stylesheets/style.css">
 </head>
 <body class="flex flex-col min-h-screen">
   <header>
-    <nav class="navbar flex justify-between items-center fixed w-screen px-3 transition ease-in-out delay-150">
+    <nav class="navbar flex justify-between items-center fixed w-screen px-4 transition ease-in-out delay-150">
       <img src="" alt="carol's cakery logo" />
       <ul class="flex mx-8">
-        <li class="px-4 py-2 m-3 transition ease-in delay-300 hover:bg-amber-900 rounded-xl hover:text-slate-100"><a href="./index.html">Home</a></li>
-        <li class="px-4 py-2 m-3 transition ease-in delay-300 hover:bg-amber-900 rounded-xl hover:text-slate-100"><a href="./about.html">About</a></li>
-        <li class="px-4 py-2 m-3 transition ease-in delay-300 hover:bg-amber-900 rounded-xl hover:text-slate-100"><a href="./gallery.html">Gallery</a></li>
+        <li class="py-2 my-3"><a class="px-4 py-2 m-3 transition ease-in delay-300 hover:bg-amber-900 rounded-xl hover:text-slate-100" href="./index.html">Home</a></li>
+        <li class="py-2 my-3"><a class="px-4 py-2 m-3 transition ease-in delay-300 hover:bg-amber-900 rounded-xl hover:text-slate-100" href="./about.html">About</a></li>
+        <li class="py-2 my-3"><a class="px-4 py-2 m-3 transition ease-in delay-300 hover:bg-amber-900 rounded-xl hover:text-slate-100" href="./gallery.html">Gallery</a></li>
       </ul>
     </nav>
   </header>
   <main>
-    <article class="banner flex items-center py-32 px-80 bg-amber-300">
+    <article class="banner flex items-center py-32 px-64 bg-amber-300">
       <div>
         <h1 class="font-bold leading-none text-amber-900">Carol's Cakes</h1>
         <h2 class="leading-none text-amber-900">Designed with Sweet Sophistication</h2>
       </div>
     </article>
+    <article class="gallery m-10">
+      <div class="grid grid-cols-3 gap-4">
+        <img class="col-span-1 row-span-1 h-full object-cover" src="../public/imgs/IMG_6974.JPG" loading="lazy" alt="pink cake with assorted fruits on top on a white-bottomed caked board">
+        <img class="col-span-2 row-span-2 h-full object-cover" src="../public/imgs/IMG_6408.JPG" loading="lazy" alt="number 14 made of cake with fairy on top">
+        <img class="col-span-1 row-span-1 h-full object-cover" src="../public/imgs/IMG_3314.jpg" loading="lazy" alt="assorted christmas cupcakes in a plastic gift box wrapped with red ribbons">
+        <img class="col-span-1 row-span-1 h-full object-cover" src="../public/imgs/IMG_4170.jpg" loading="lazy" alt="number 16 made of cake with fairy on the side and some LED lights surrounding the cake">
+        <img class="col-span-1 row-span-2 h-full object-cover" src="../public/imgs/IMG_5706.JPG" loading="lazy" alt="3 collections of 4 assorted cupcakes on a black tabletop">
+        <img class="col-span-1 row-span-1 h-full object-cover" src="../public/imgs/IMG_1111.JPG" loading="lazy" alt="cake with pink top and fruits on top on a white-bottomed cake board">
+        <img class="col-span-1 row-span-1 h-full object-cover" src="../public/imgs/IMG_0582.jpg" loading="lazy" alt="3/4 of a cheesecake and a slice of cheescake on the side in a white plate">
+        <img class="col-span-1 row-span-1 h-full object-cover" src="../public/imgs/IMG_6975.JPG" loading="lazy" alt="pink cake with assorted fruits on top on a white-bottomed caked board with some LED lights surrounding the cake">
+      </div>
+    </article
   </main>
   <footer class="mt-auto text-center">
     <div class="socials flex justify-center items-center mt-4">
@@ -38,7 +53,7 @@
 </body>
 <script>
   const navbar = document.querySelector('.navbar');
-  const navLinks = document.querySelectorAll('.navbar li');
+  const navLinks = document.querySelectorAll('.navbar li a');
 
   function navbarColorChangeOnScroll() {
     if (window.scrollY > 0) {
